@@ -31,15 +31,13 @@ A simple single page Text Editor called JATE (Just Another Text Editor). It is a
 ```bash
 - npm run start
 ```
-- Then visit [localhost:8080](localhost:8080) to use the app or [Click on this link](https://tech-blog-damneet.herokuapp.com/) to visit the live application on Heroku..
+- Then visit [localhost:3000](localhost:3000) to use the app or [Click on this link](https://text-editor-pwa-damneet.herokuapp.com/) to visit the live application on Heroku..
 
-- Visit the application repository at [GitHub Repository](https://github.com/daman29/tech-blog)
+- Visit the application repository at [GitHub Repository](https://github.com/daman29/text-editor-PWA)
 
 The GIF below shows the basic functions of the application
 
 ![Application demo showing basic text input and install function](./assets/images/demo.gif)
-
-
 
 ## License
 - This application is licensed under the [MIT License](./LICENSE)
