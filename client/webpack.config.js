@@ -21,6 +21,7 @@ module.exports = () => {
       // Webpack plugin that generates our html file and injects our bundles.
       new HtmlWebpackPlugin({
         template: "./index.html",
+        favicon: "./favicon.ico",
         title: "Text Editor",
       }),
 
@@ -29,23 +30,24 @@ module.exports = () => {
         swSrc: "./src-sw.js",
         swDest: "src-sw.js",
       }),
-      
+
       // manifest generator plugin
       new WebpackPwaManifest({
-        name: 'JATE',
-        short_name: 'JATE',
-        description: 'Just another text editor!',
-        background_color: '#31a9e1',
-        theme_color: '#272822',
-        start_url: './',
-        publicPath: './',
+        name: "JATE",
+        short_name: "JATE",
+        description: "Just another text editor!",
+        background_color: "#31a9e1",
+        theme_color: "#272822",
+        start_url: "./",
+        publicPath: "./",
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons'),
+            destination: path.join("assets", "icons"),
           },
         ],
+        fingerprints: false
       }),
     ],
 

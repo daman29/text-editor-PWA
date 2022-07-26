@@ -38,3 +38,18 @@ registerRoute(
     ],
   })
 );
+
+registerRoute(
+  ({ request }) => ["image"].includes(request.destination),
+  new CacheFirst({
+    cacheName: "assets-images",
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxAgeSeconds: 30 * 24 * 60 * 60,
+      }),
+    ],
+  })
+);
